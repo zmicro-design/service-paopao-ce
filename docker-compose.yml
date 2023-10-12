@@ -2,8 +2,8 @@ services:
   paopao-ce:
     restart: always
     image: whatwewant/paopao-ce:${SERVICE_PAOPAO_CE_IMAGE_VERSION}
-    # ports:
-    #   - 0.0.0.0:${SERVICE_PAOPAO_CE_PORT}:8008
+    ports:
+      - 0.0.0.0:${SERVICE_PAOPAO_CE_PORT}:8008
     # environment:
     #   PORT: $SERVICE_PAOPAO_CE_PORT
     #   USERNAME: ${SERVICE_PAOPAO_CE_USERNAME}

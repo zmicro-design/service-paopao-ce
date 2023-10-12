@@ -12,9 +12,9 @@ Server: # 服务设置
   ReadTimeout: 60
   WriteTimeout: 60
 Features:
-  Default: ["Web", "Frontend:EmbedWeb", "Meili", "LocalOSS",  "MySQL", "BigCacheIndex", "LoggerFile"]
-  Develop: ["Base", "MySQL", "BigCacheIndex", "Meili", "Sms", "AliOSS", "LoggerMeili", "OSS:Retention"]
-  Demo: ["Base", "MySQL", "Option", "Zinc", "Sms", "MinIO", "LoggerZinc", "Migration"]
+  Default: ["Web", "Frontend:EmbedWeb", "Meili", "LocalOSS",  "Postgres", "BigCacheIndex", "LoggerFile"]
+  Develop: ["Base", "Postgres", "BigCacheIndex", "Meili", "Sms", "AliOSS", "LoggerMeili", "OSS:Retention"]
+  Demo: ["Base", "Postgres", "Option", "Zinc", "Sms", "MinIO", "LoggerZinc", "Migration"]
   Slim: ["Base", "Sqlite3", "LocalOSS", "LoggerFile", "OSS:TempDir"]
   Base: ["Redis", "PhoneBind"]
   Docs: ["Docs:OpenAPI"]
