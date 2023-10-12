@@ -1,0 +1,34 @@
+#!/bin/bash
+
+service::config_set() {
+  config::check_or_set $1 $2 $SERVICE_CONFIG "${@:3}"
+}
+
+check() {
+  if [ "$DEBUG" = "true" ]; then
+    log::info "[DEBUG][service]: $SERVICE_CONFIG"
+    cat $SERVICE_CONFIG
+  fi
+
+  service::config_set SERVICE_PAOPAO_CE_COMPANY_NAME text "Company Name:"
+  service::config_set SERVICE_PAOPAO_CE_COMPANY_DOMAIN text "Company Domain (like: github.com):"
+
+  service::config_set SERVICE_PAOPAO_CE_DATABASE_HOST text "Database Host:"
+  service::config_set SERVICE_PAOPAO_CE_DATABASE_PORT text "Database Port:"
+  service::config_set SERVICE_PAOPAO_CE_DATABASE_USERNAME text "Database Username:"
+  service::config_set SERVICE_PAOPAO_CE_DATABASE_PASSWORD password "Database Password:"
+  service::config_set SERVICE_PAOPAO_CE_DATABASE_NAME text "Database Name:"
+
+  # if [ ! -f "${SERVICE_PAOPAO_CE_CONFIGS_HOME}/config.yaml" ]; then
+  cat $SERVICE_DIR/config/config.yaml.sample |
+    sed "s%<SERVICE_PAOPAO_CE_COMPANY_NAME>%${SERVICE_PAOPAO_CE_COMPANY_NAME}%g" |
+    sed "s%<SERVICE_PAOPAO_CE_COMPANY_DOMAIN>%${SERVICE_PAOPAO_CE_COMPANY_DOMAIN}%g" |
+    sed "s%<SERVICE_PAOPAO_CE_DATABASE_HOST>%${SERVICE_PAOPAO_CE_DATABASE_HOST}%g" |
+    sed "s%<SERVICE_PAOPAO_CE_DATABASE_PORT>%${SERVICE_PAOPAO_CE_DATABASE_PORT}%g" |
+    sed "s%<SERVICE_PAOPAO_CE_DATABASE_USERNAME>%${SERVICE_PAOPAO_CE_DATABASE_USERNAME}%g" |
+    sed "s%<SERVICE_PAOPAO_CE_DATABASE_PASSWORD>%${SERVICE_PAOPAO_CE_DATABASE_PASSWORD}%g" |
+    sed "s%<SERVICE_PAOPAO_CE_DATABASE_NAME>%${SERVICE_PAOPAO_CE_DATABASE_NAME}%g" >${SERVICE_PAOPAO_CE_CONFIGS_HOME}/config.yaml
+  # fi
+}
+
+check $@
