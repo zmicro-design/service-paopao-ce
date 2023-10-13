@@ -1,6 +1,16 @@
 services:
   paopao-ce:
     restart: always
+    image: whatwewant/connect-doreamon:v1
+    environment:
+      MODE: production
+      UPSTREAM: http://paopao-ce_upstream:8008
+      CLIENT_ID: ${SERVICE_PAOPAO_CE_DOREAMON_CLIENT_ID}
+      CLIENT_SECRET: ${SERVICE_PAOPAO_CE_DOREAMON_CLIENT_SECRET}
+      REDIRECT_URI: ${SERVICE_PAOPAO_CE_DOREAMON_REDIRECT_URI}
+
+  paopao-ce_upstream:
+    restart: always
     image: whatwewant/paopao-ce:${SERVICE_PAOPAO_CE_IMAGE_VERSION}
     ports:
       - 0.0.0.0:${SERVICE_PAOPAO_CE_PORT}:8008
