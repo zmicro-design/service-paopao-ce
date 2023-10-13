@@ -25,6 +25,10 @@ check() {
   service::config_set SERVICE_PAOPAO_CE_DATABASE_PASSWORD text "Database Password:"
   service::config_set SERVICE_PAOPAO_CE_DATABASE_NAME text "Database Name:" paopao_ce
 
+  service::config_set SERVICE_PAOPAO_CE_MEILISEARCH_HOST text "Meilisearch Host:" meilisearch
+  service::config_set SERVICE_PAOPAO_CE_MEILISEARCH_PORT text "Meilisearch Port:" 7700
+  service::config_set SERVICE_PAOPAO_CE_MEILISEARCH_MASTER_KEY text "Meilisearch Master Key:"
+
   # if [ ! -f "${SERVICE_PAOPAO_CE_CONFIGS_HOME}/config.yaml" ]; then
   cat ${SERVICE_DIR}/conf/config.yaml.sample |
     sed "s%<SERVICE_PAOPAO_CE_COMPANY_NAME>%${SERVICE_PAOPAO_CE_COMPANY_NAME}%g" |

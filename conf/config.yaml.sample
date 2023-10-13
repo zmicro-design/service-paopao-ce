@@ -94,7 +94,7 @@ LoggerZinc: # 使用Zinc写日志
   Password: admin
   Secure: False
 LoggerMeili: # 使用Meili写日志
-  Host: paopao-ce_meili:7700
+  Host: <SERVICE_PAOPAO_CE_MEILISEARCH_HOST>:<SERVICE_PAOPAO_CE_MEILISEARCH_PORT>
   Index: paopao-log
   ApiKey: paopao-meilisearch
   Secure: False
@@ -114,7 +114,7 @@ Zinc: # Zinc搜索配置
   Password: admin
   Secure: False
 Meili: # Meili搜索配置
-  Host: paopao-ce_meili:7700
+  Host: <SERVICE_PAOPAO_CE_MEILISEARCH_HOST>:<SERVICE_PAOPAO_CE_MEILISEARCH_PORT>
   Index: paopao-data
   ApiKey: paopao-meilisearch
   Secure: False

@@ -22,16 +22,6 @@ services:
     volumes:
       - ${SERVICE_PAOPAO_CE_CONFIGS_HOME}/config.yaml:/app/paopao-ce/config.yaml
       - ${SERVICE_PAOPAO_CE_DATA_HOME}/paopao-ce:/app/paopao-ce/custom
-
-  paopao-ce_meili:
-    image: whatwewant/meilisearch:v1.4-1
-    restart: always
-    # ports:
-    #   - 7700:7700
-    volumes:
-      - ${SERVICE_PAOPAO_CE_DATA_HOME}/meili:/meili_data
-    environment:
-      - MEILI_MASTER_KEY=paopao-meilisearch
   
   paopao-ce_redis:
     image: whatwewant/redis-stack:v7.2-1
