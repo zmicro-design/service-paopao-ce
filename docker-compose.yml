@@ -21,7 +21,7 @@ services:
       SECRET_KEY: ${SERVICE_PAOPAO_CE_SECRET_KEY}
     volumes:
       - ${SERVICE_PAOPAO_CE_CONFIGS_HOME}/config.yaml:/app/paopao-ce/config.yaml
-      - ${SERVICE_PAOPAO_CE_DATA_HOME}/custom:/app/paopao-ce/custom
+      - ${SERVICE_PAOPAO_CE_DATA_HOME}/paopao-ce:/app/paopao-ce/custom
 
   paopao-ce_meili:
     image: whatwewant/meilisearch:v1.4-1
@@ -29,7 +29,7 @@ services:
     # ports:
     #   - 7700:7700
     volumes:
-      - ${SERVICE_PAOPAO_CE_DATA_HOME}/custom/data/meili/data:/meili_data
+      - ${SERVICE_PAOPAO_CE_DATA_HOME}/meili:/meili_data
     environment:
       - MEILI_MASTER_KEY=paopao-meilisearch
   
