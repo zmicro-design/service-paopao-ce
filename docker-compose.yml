@@ -5,6 +5,7 @@ services:
     environment:
       MODE: production
       UPSTREAM: http://paopao-ce_upstream:8008
+      SECRET_KEY: ${SERVICE_PAOPAO_CE_SECRET_KEY}
       CLIENT_ID: ${SERVICE_PAOPAO_CE_DOREAMON_CLIENT_ID}
       CLIENT_SECRET: ${SERVICE_PAOPAO_CE_DOREAMON_CLIENT_SECRET}
       REDIRECT_URI: ${SERVICE_PAOPAO_CE_DOREAMON_REDIRECT_URI}
@@ -16,10 +17,8 @@ services:
     image: whatwewant/paopao-ce:${SERVICE_PAOPAO_CE_IMAGE_VERSION}
     # ports:
     #   - 0.0.0.0:${SERVICE_PAOPAO_CE_PORT}:8008
-    # environment:
-    #   PORT: $SERVICE_PAOPAO_CE_PORT
-    #   USERNAME: ${SERVICE_PAOPAO_CE_USERNAME}
-    #   PASSWORD: ${SERVICE_PAOPAO_CE_PASSWORD}
+    environment:
+      SECRET_KEY: ${SERVICE_PAOPAO_CE_SECRET_KEY}
     volumes:
       - ${SERVICE_PAOPAO_CE_CONFIGS_HOME}/config.yaml:/app/paopao-ce/config.yaml
       - ${SERVICE_PAOPAO_CE_DATA_HOME}/custom:/app/paopao-ce/custom

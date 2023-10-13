@@ -13,6 +13,8 @@ check() {
   service::config_set SERVICE_PAOPAO_CE_COMPANY_NAME text "Company Name:" "zmicro"
   service::config_set SERVICE_PAOPAO_CE_COMPANY_DOMAIN text "Company Domain:"  "zmicro.com"
 
+  service::config_set SERVICE_PAOPAO_CE_SECRET_KEY text "Secret Key:" "$(os::random_string 8)"
+
   service::config_set SERVICE_PAOPAO_CE_DOREAMON_CLIENT_ID text "Doreamon Client ID:"
   service::config_set SERVICE_PAOPAO_CE_DOREAMON_CLIENT_SECRET text "Doreamon Client Secret:"
   service::config_set SERVICE_PAOPAO_CE_DOREAMON_REDIRECT_URI text "Doreamon Redirect URI:"
