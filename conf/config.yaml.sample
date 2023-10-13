@@ -123,8 +123,8 @@ ObjectStorage: # 对象存储通用配置
   TempDir: tmp      # 临时对象存放目录名
 AliOSS: # 阿里云OSS存储配置
   Endpoint: <SERVICE_PAOPAO_CE_OSS_ENDPOINT>
-  AccessKeyID: <SERVICE_PAOPAO_CE_OSS_ACCESS_KEY_ID>
-  AccessKeySecret: <SERVICE_PAOPAO_CE_OSS_ACCESS_KEY_SECRET> 
+  AccessKeyID: <SERVICE_PAOPAO_CE_OSS_KEY_ID>
+  AccessKeySecret: <SERVICE_PAOPAO_CE_OSS_KEY_SECRET> 
   Bucket: <SERVICE_PAOPAO_CE_OSS_BUCKET>
   Domain: 
 COS: # 腾讯云COS存储配置
