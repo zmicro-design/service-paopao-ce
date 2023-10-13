@@ -96,7 +96,7 @@ LoggerZinc: # 使用Zinc写日志
 LoggerMeili: # 使用Meili写日志
   Host: <SERVICE_PAOPAO_CE_MEILISEARCH_HOST>:<SERVICE_PAOPAO_CE_MEILISEARCH_PORT>
   Index: paopao-log
-  ApiKey: paopao-meilisearch
+  ApiKey: <SERVICE_PAOPAO_CE_MEILISEARCH_MASTER_KEY>
   Secure: False
   MinWorker: 5               # 最小后台工作者, 设置范围[5, 100], 默认5
   MaxLogBuffer: 100          # 最大log缓存条数, 设置范围[10, 10000], 默认100
@@ -116,7 +116,7 @@ Zinc: # Zinc搜索配置
 Meili: # Meili搜索配置
   Host: <SERVICE_PAOPAO_CE_MEILISEARCH_HOST>:<SERVICE_PAOPAO_CE_MEILISEARCH_PORT>
   Index: paopao-data
-  ApiKey: paopao-meilisearch
+  ApiKey: <SERVICE_PAOPAO_CE_MEILISEARCH_MASTER_KEY>
   Secure: False
 ObjectStorage: # 对象存储通用配置
   RetainInDays: 2   # 临时对象过期时间多少天
