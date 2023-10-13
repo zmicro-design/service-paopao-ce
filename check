@@ -1,7 +1,8 @@
 #!/bin/bash
 
 service::config_set() {
-  config::check_or_set $1 $2 $SERVICE_CONFIG "${@:3}"
+  # config::check_or_set $1 $2 $SERVICE_CONFIG "${@:3}"
+  config::check_or_set $1 $2 $SERVICE_CONFIG "$3" "$4" "$5"
 }
 
 check() {
@@ -27,9 +28,9 @@ check() {
 
   service::config_set SERVICE_PAOPAO_REDIS_HOST text "Redis Host:" redis
   service::config_set SERVICE_PAOPAO_REDIS_PORT text "Redis Port:" 6379
-  service::config_set SERVICE_PAOPAO_REDIS_USERNAME text "Redis Username:" postgres
-  service::config_set SERVICE_PAOPAO_REDIS_PASSWORD text "Redis Password:"
-  service::config_set SERVICE_PAOPAO_REDIS_DB text "Database Name:" 8
+  service::config_set SERVICE_PAOPAO_REDIS_USERNAME text "Redis Username:" false
+  service::config_set SERVICE_PAOPAO_REDIS_PASSWORD text "Redis Password:" false
+  service::config_set SERVICE_PAOPAO_REDIS_DB text "Database Name:" 8 false
 
   service::config_set SERVICE_PAOPAO_CE_MEILISEARCH_HOST text "Meilisearch Host:" meilisearch
   service::config_set SERVICE_PAOPAO_CE_MEILISEARCH_PORT text "Meilisearch Port:" 7700
