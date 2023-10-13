@@ -1,3 +1,3 @@
 NAME=paopao-ce
-VERSION=v1.2.5
+VERSION=v1.2.6
 DESCRIPTION="paopao-ce Service"

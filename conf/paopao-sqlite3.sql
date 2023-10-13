@@ -477,6 +477,7 @@ CREATE TABLE
         "id" integer NOT NULL,
         "nickname" text(32) NOT NULL,
         "username" text(32) NOT NULL,
+        "email" text(64) NOT NULL,
         "phone" text(16) NOT NULL,
         "password" text(32) NOT NULL,
         "salt" text(16) NOT NULL,

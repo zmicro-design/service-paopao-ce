@@ -401,6 +401,7 @@ CREATE TABLE
         id BIGINT NOT NULL DEFAULT nextval('user_id_seq':: regclass),
         nickname VARCHAR(32) NOT NULL DEFAULT '',
         username VARCHAR(32) NOT NULL DEFAULT '',
+        email VARCHAR(64) NOT NULL DEFAULT '',
         phone VARCHAR(16) NOT NULL DEFAULT '',
         -- 手机号
         password VARCHAR(32) NOT NULL DEFAULT '',
