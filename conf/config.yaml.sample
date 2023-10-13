@@ -19,7 +19,7 @@ Features:
   Base: ["Redis", "PhoneBind"]
   Docs: ["Docs:OpenAPI"]
   Deprecated: ["Deprecated:OldWeb"]
-  Service: ["Web", "Admin", "SpaceX", "Bot", "LocalOSS", "Mobile", "Frontend:Web", "Frontend:EmbedWeb", "Docs"]
+  Service: ["Web", "Admin", "SpaceX", "Bot", "LocalOSS", "AliOSS", "Mobile", "Frontend:Web", "Frontend:EmbedWeb", "Docs"]
   Option: ["SimpleCacheIndex"]
   Sms: "SmsJuhe"
 WebServer: # Web服务
