@@ -33,6 +33,7 @@ check() {
   service::config_set SERVICE_PAOPAO_CE_OSS_ACCESS_KEY_SECRET text "OSS Access Key Secret:"
   service::config_set SERVICE_PAOPAO_CE_OSS_BUCKET text "OSS Bucket:"
   service::config_set SERVICE_PAOPAO_CE_OSS_ENDPOINT text "OSS Endpoint:"
+  service::config_set SERVICE_PAOPAO_CE_OSS_DOMAIN text "OSS Domain:"
 
   # if [ ! -f "${SERVICE_PAOPAO_CE_CONFIGS_HOME}/config.yaml" ]; then
   cat ${SERVICE_DIR}/conf/config.yaml.sample |
@@ -49,7 +50,8 @@ check() {
     sed "s%<SERVICE_PAOPAO_CE_OSS_ACCESS_KEY_ID>%${SERVICE_PAOPAO_CE_OSS_ACCESS_KEY_ID}%g" |
     sed "s%<SERVICE_PAOPAO_CE_OSS_ACCESS_KEY_SECRET>%${SERVICE_PAOPAO_CE_OSS_ACCESS_KEY_SECRET}%g" |
     sed "s%<SERVICE_PAOPAO_CE_OSS_BUCKET>%${SERVICE_PAOPAO_CE_OSS_BUCKET}%g" |
-    sed "s%<SERVICE_PAOPAO_CE_OSS_ENDPOINT>%${SERVICE_PAOPAO_CE_OSS_ENDPOINT}%g" >${SERVICE_CONFIGS}/config.yaml
+    sed "s%<SERVICE_PAOPAO_CE_OSS_ENDPOINT>%${SERVICE_PAOPAO_CE_OSS_ENDPOINT}%g" |
+    sed "s%<SERVICE_PAOPAO_CE_OSS_DOMAIN>%${SERVICE_PAOPAO_CE_OSS_DOMAIN}%g" >${SERVICE_CONFIGS}/config.yaml
   # fi
 }
 
