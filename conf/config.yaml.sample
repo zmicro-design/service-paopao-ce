@@ -12,7 +12,7 @@ Server: # 服务设置
   ReadTimeout: 60
   WriteTimeout: 60
 Features:
-  Default: ["Web", "Frontend:EmbedWeb", "Meili", "LocalOSS",  "Postgres", "BigCacheIndex", "LoggerFile"]
+  Default: ["Web", "Frontend:EmbedWeb", "Meili", "AliOSS",  "Postgres", "BigCacheIndex", "LoggerFile"]
   Develop: ["Base", "Postgres", "BigCacheIndex", "Meili", "Sms", "AliOSS", "LoggerMeili", "OSS:Retention"]
   Demo: ["Base", "Postgres", "Option", "Zinc", "Sms", "MinIO", "LoggerZinc", "Migration"]
   Slim: ["Base", "Sqlite3", "LocalOSS", "LoggerFile", "OSS:TempDir"]
@@ -122,10 +122,10 @@ ObjectStorage: # 对象存储通用配置
   RetainInDays: 2   # 临时对象过期时间多少天
   TempDir: tmp      # 临时对象存放目录名
 AliOSS: # 阿里云OSS存储配置
-  Endpoint: 
-  AccessKeyID: 
-  AccessKeySecret: 
-  Bucket: 
+  Endpoint: <SERVICE_PAOPAO_CE_OSS_ENDPOINT>
+  AccessKeyID: <SERVICE_PAOPAO_CE_OSS_ACCESS_KEY_ID>
+  AccessKeySecret: <SERVICE_PAOPAO_CE_OSS_ACCESS_KEY_SECRET> 
+  Bucket: <SERVICE_PAOPAO_CE_OSS_BUCKET>
   Domain: 
 COS: # 腾讯云COS存储配置
   SecretID: 
