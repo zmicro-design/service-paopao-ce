@@ -13,6 +13,10 @@ check() {
   service::config_set SERVICE_PAOPAO_CE_COMPANY_NAME text "Company Name:" "zmicro"
   service::config_set SERVICE_PAOPAO_CE_COMPANY_DOMAIN text "Company Domain:"  "zmicro.com"
 
+  service::config_set SERVICE_PAOPAO_CE_DOREAMON_CLIENT_ID text "Doreamon Client ID:"
+  service::config_set SERVICE_PAOPAO_CE_DOREAMON_CLIENT_SECRET text "Doreamon Client Secret:"
+  service::config_set SERVICE_PAOPAO_CE_DOREAMON_REDIRECT_URI text "Doreamon Redirect URI:"
+
   service::config_set SERVICE_PAOPAO_CE_DATABASE_HOST text "Database Host:" postgres
   service::config_set SERVICE_PAOPAO_CE_DATABASE_PORT text "Database Port:" 5432
   service::config_set SERVICE_PAOPAO_CE_DATABASE_USERNAME text "Database Username:" postgres
