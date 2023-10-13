@@ -30,7 +30,7 @@ check() {
   service::config_set SERVICE_PAOPAO_CE_MEILISEARCH_MASTER_KEY text "Meilisearch Master Key:"
 
   service::config_set SERVICE_PAOPAO_CE_OSS_ACCESS_KEY_ID text "OSS Access Key ID:"
-  service::config_set SERVICE_PAOPAO_CE_OSS_ACCESS_KEY_SECRET "OSS Access Key Secret:"
+  service::config_set SERVICE_PAOPAO_CE_OSS_ACCESS_KEY_SECRET text "OSS Access Key Secret:"
   service::config_set SERVICE_PAOPAO_CE_OSS_BUCKET text "OSS Bucket:"
   service::config_set SERVICE_PAOPAO_CE_OSS_ENDPOINT text "OSS Endpoint:"
 
