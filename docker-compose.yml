@@ -4,7 +4,7 @@ services:
     image: whatwewant/connect-doreamon:v1
     environment:
       MODE: production
-      UPSTREAM: http://paopao-ce_upstream:8008
+      UPSTREAM: http://paopao-ce_upstream:${SERVICE_PAOPAO_CE_PORT}
       SECRET_KEY: ${SERVICE_PAOPAO_CE_SECRET_KEY}
       CLIENT_ID: ${SERVICE_PAOPAO_CE_DOREAMON_CLIENT_ID}
       CLIENT_SECRET: ${SERVICE_PAOPAO_CE_DOREAMON_CLIENT_SECRET}
@@ -19,6 +19,7 @@ services:
     # ports:
     #   - 0.0.0.0:${SERVICE_PAOPAO_CE_PORT}:8008
     environment:
+      PORT: ${SERVICE_PAOPAO_CE_PORT}
       SECRET_KEY: ${SERVICE_PAOPAO_CE_SECRET_KEY}
       COMPANY_NAME: ${SERVICE_PAOPAO_CE_COMPANY_NAME}
       COMPANY_DOMAIN: ${SERVICE_PAOPAO_CE_COMPANY_DOMAIN}
